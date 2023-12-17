@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap");
+#player-playlist-container {
+    font-family: "Mina", sans-serif;
+    background-color: #121212;
+    color: #fff;
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+#player-playlist-container .player-song {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border-bottom: 1px solid #282828;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#player-playlist-container .player-song:hover {
+    background-color: #7b4dff;
+}
+#player-playlist-container .player-song.active {
+    background-color: #7b4dff;
+}
+#player-playlist-container .player-song strong {
+    font-weight: normal;
+    margin-right: 10px;
+}
+#player-playlist-container .player-song span {
+    font-size: 0.9em;
+    opacity: 0.7;
+}
+
+#player-container {
+    font-family: "Mina", sans-serif;
+    background-color: #121212;
+    color: #fff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+#player-container.player-sticky {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+#player-container h2#song-title,
+#player-container h3#song-artist {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#player-container h2#song-title {
+    font-size: 1.2em;
+}
+#player-container h3#song-artist {
+    font-size: 1em;
+    opacity: 0.8;
+}
+#player-container #player-track-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#player-container #player-track-container #player-track-progress {
+    flex: 9;
+    max-width: 90%;
+    height: 8px;
+    background-color: #404040;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+@media (max-width: 768px) {
+    #player-container #player-track-container #player-track-progress {
+        flex: 8;
+        max-width: 80%;
+    }
+}
+#player-container #player-track-container #player-track-progress #player-progress-bar {
+    height: 100%;
+    background-color: #7b4dff;
+    width: 0%;
+    border-radius: 2px;
+}
+#player-container #player-track-container #player-time-current,
+#player-container #player-track-container #player-time-total {
+    flex: 0.5;
+    max-width: 5%;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    #player-container #player-track-container #player-time-current,
+    #player-container #player-track-container #player-time-total {
+        flex: 1;
+        max-width: 10%;
+    }
+}
+#player-container .player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#player-container .player-controls input[type="range"] {
+    accent-color: #7b4dff !important;
+}
+#player-container .player-controls button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 5px;
+    font-size: 16px;
+}
+#player-container .player-controls button:hover {
+    color: #7b4dff;
+}
+#player-container .player-controls button:focus {
+    outline: none;
+}
+#player-container .player-controls button i.fa {
+    pointer-events: none;
+}
+#player-container .player-controls input[type="range"] {
+    width: 100px;
+    margin: 0 10px;
+}
+#player-container #player-repeat-button.active,
+#player-container #player-shuffle-button.active {
+    color: #7b4dff;
+} /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="dist/css/style.css" />
+        <script src="dist/js/main.js"></script>
+        <title>Web Player</title>
+    </head>
+    <body>
+        <h1 style="text-align: center;">My Custom Website</h1>
+        <h2 style="text-align: center;">This is a website with my songs!</h2>
+        <hr />
+        <h3 style="text-align: center;">My new playlist:</h3>
+        <div id="playerContainer" style="width: 800px; margin: 0 auto"></div>
+
+        <script>
+            // Usage example
+            const player = new MusicPlayer("playerContainer", {
+                songs: [
+                    {
+                        id: 1,
+                        title: "Hamilton (Original Broadway Cast Recording)",
+                        artist: "Lin-Manuel Miranda",
+                        url: "https://p.scdn.co/mp3-preview/daa19c6d70cdf11f5c910007fbebf413d18a3ca5",
+                    },
+                    {
+                        id: 2,
+                        title: "California Love Remix",
+                        artist: "Tupac Shakur",
+                        url: "src/audio/California_Love_Remix.mp3",
+                    },
+                    {
+                        id: 3,
+                        title: "Life Goes On",
+                        artist: "Tupac Shakur",
+                        url: "src/audio/Life_Goes_On.mp3",
+                    },
+                ],
+                keyboard: true,
+            });
+        </script>
+    </body>
+</html>
