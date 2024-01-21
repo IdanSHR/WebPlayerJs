@@ -39,7 +39,14 @@ Creating a new instance of WebPlayerJS is straightforward, Just define a contain
 <div id="playerContainer"></div>
 
 <script> const player = new MusicPlayer("playerContainer", {
-        songs: [/* array of your songs */],
+        songs: [
+            {
+                id: number | string,
+                title: string,
+                artist: string,
+                url: string,
+            }
+        ],
         // other settings (optional)
     }); </script>
 ```
@@ -134,3 +141,4 @@ Ready to elevate your web project with seamless audio integration? Clone the rep
 ---
 
 Happy coding and enjoy the music with WebPlayerJS! 🎶🚀
+<a href="https://www.buymeacoffee.com/idanshr" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg" alt="buy me a coffee" width="200px"/></a>
